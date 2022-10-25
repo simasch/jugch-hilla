@@ -1,8 +1,8 @@
-import { Route } from '@vaadin/router';
-import Role from './generated/ch/martinelli/demo/data/Role';
-import { appStore } from './stores/app-store';
+import {Route} from '@vaadin/router';
+import {appStore} from './stores/app-store';
 import './views/helloworld/hello-world-view';
 import './views/main-layout';
+import Role from 'Frontend/generated/ch/martinelli/demo/entity/Role';
 
 export type ViewRoute = Route & {
   title?: string;

@@ -1,25 +1,25 @@
 import '@vaadin-component-factory/vcf-nav';
 import '@vaadin/app-layout';
-import { AppLayout } from '@vaadin/app-layout';
+import {AppLayout} from '@vaadin/app-layout';
 import '@vaadin/app-layout/vaadin-drawer-toggle';
 import '@vaadin/avatar/vaadin-avatar';
 import '@vaadin/icon';
 import '@vaadin/menu-bar';
-import { MenuBarItem, MenuBarItemSelectedEvent } from '@vaadin/menu-bar';
+import {MenuBarItem, MenuBarItemSelectedEvent} from '@vaadin/menu-bar';
 import '@vaadin/scroller';
 import '@vaadin/tabs';
 import '@vaadin/tabs/vaadin-tab';
 import '@vaadin/vaadin-lumo-styles/vaadin-iconset';
-import User from 'Frontend/generated/ch/martinelli/demo/data/entity/User';
-import { imageDataUrl } from 'Frontend/util';
-import { html, render } from 'lit';
-import { customElement } from 'lit/decorators.js';
-import { until } from 'lit/directives/until.js';
-import { logout } from '../auth';
-import { router } from '../index';
-import { hasAccess, views } from '../routes';
-import { appStore } from '../stores/app-store';
-import { Layout } from './view';
+import {imageDataUrl} from 'Frontend/util';
+import {html, render} from 'lit';
+import {customElement} from 'lit/decorators.js';
+import {until} from 'lit/directives/until.js';
+import {logout} from '../auth';
+import {router} from '../index';
+import {hasAccess, views} from '../routes';
+import {appStore} from '../stores/app-store';
+import {Layout} from './view';
+import User from 'Frontend/generated/ch/martinelli/demo/entity/User';
 
 interface RouteInfo {
   path: string;

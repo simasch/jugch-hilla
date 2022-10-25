@@ -1,11 +1,12 @@
-package ch.martinelli.demo.data.endpoint;
+package ch.martinelli.demo.endpoint;
 
-import ch.martinelli.demo.data.entity.User;
+import ch.martinelli.demo.entity.User;
 import ch.martinelli.demo.security.AuthenticatedUser;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Optional;
 
 @Endpoint
 @AnonymousAllowed

@@ -1,4 +1,4 @@
-package ch.martinelli.demo.endpoints.helloworld;
+package ch.martinelli.demo.endpoint;
 
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;

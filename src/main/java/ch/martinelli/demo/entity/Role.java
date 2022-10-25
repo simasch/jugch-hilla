@@ -1,4 +1,4 @@
-package ch.martinelli.demo.data;
+package ch.martinelli.demo.entity;
 
 public enum Role {
     USER, ADMIN;

@@ -1,38 +1,39 @@
-package ch.martinelli.demo.data.endpoint;
+package ch.martinelli.demo.endpoint;
 
-import ch.martinelli.demo.data.entity.SamplePerson;
-import ch.martinelli.demo.data.service.SamplePersonService;
+import ch.martinelli.demo.entity.Person;
+import ch.martinelli.demo.service.PersonService;
 import dev.hilla.Endpoint;
 import dev.hilla.Nonnull;
-import java.util.Optional;
-import java.util.UUID;
-import javax.annotation.security.RolesAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import javax.annotation.security.RolesAllowed;
+import java.util.Optional;
+import java.util.UUID;
+
 @Endpoint
 @RolesAllowed("ADMIN")
-public class SamplePersonEndpoint {
+public class PersonEndpoint {
 
-    private final SamplePersonService service;
+    private final PersonService service;
 
     @Autowired
-    public SamplePersonEndpoint(SamplePersonService service) {
+    public PersonEndpoint(PersonService service) {
         this.service = service;
     }
 
     @Nonnull
-    public Page<@Nonnull SamplePerson> list(Pageable page) {
+    public Page<@Nonnull Person> list(Pageable page) {
         return service.list(page);
     }
 
-    public Optional<SamplePerson> get(@Nonnull UUID id) {
+    public Optional<Person> get(@Nonnull UUID id) {
         return service.get(id);
     }
 
     @Nonnull
-    public SamplePerson update(@Nonnull SamplePerson entity) {
+    public Person update(@Nonnull Person entity) {
         return service.update(entity);
     }
 

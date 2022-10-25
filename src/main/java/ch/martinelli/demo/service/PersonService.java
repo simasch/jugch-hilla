@@ -1,28 +1,30 @@
-package ch.martinelli.demo.data.service;
+package ch.martinelli.demo.service;
 
-import ch.martinelli.demo.data.entity.User;
-import java.util.Optional;
-import java.util.UUID;
+import ch.martinelli.demo.entity.Person;
+import ch.martinelli.demo.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-@Service
-public class UserService {
+import java.util.Optional;
+import java.util.UUID;
 
-    private final UserRepository repository;
+@Service
+public class PersonService {
+
+    private final PersonRepository repository;
 
     @Autowired
-    public UserService(UserRepository repository) {
+    public PersonService(PersonRepository repository) {
         this.repository = repository;
     }
 
-    public Optional<User> get(UUID id) {
+    public Optional<Person> get(UUID id) {
         return repository.findById(id);
     }
 
-    public User update(User entity) {
+    public Person update(Person entity) {
         return repository.save(entity);
     }
 
@@ -30,7 +32,7 @@ public class UserService {
         repository.deleteById(id);
     }
 
-    public Page<User> list(Pageable pageable) {
+    public Page<Person> list(Pageable pageable) {
         return repository.findAll(pageable);
     }
 

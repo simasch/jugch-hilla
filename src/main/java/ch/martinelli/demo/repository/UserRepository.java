@@ -1,8 +1,9 @@
-package ch.martinelli.demo.data.service;
+package ch.martinelli.demo.repository;
 
-import ch.martinelli.demo.data.entity.User;
-import java.util.UUID;
+import ch.martinelli.demo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
 
